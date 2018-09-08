@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 0
+    path: Assets/Nagamine/Scene/Title.unity
+    guid: 920452740491d7445879ed5e74f89d5c
+  - enabled: 0
+    path: Assets/Nagamine/Scene/Tutorial.unity
+    guid: fe24e8a1e525d844db2c93e07668bd35
+  - enabled: 0
+    path: Assets/Nagamine/Scene/GameMain.unity
+    guid: 9282b67a37be65b49b36970ec38cb066
+  - enabled: 0
+    path: Assets/Nagamine/Scene/ARcamera.unity
+    guid: bb96f34d64e420d43aff63b129290bf7
+  - enabled: 0
+    path: Assets/Kina/Scenes/Q2.unity
+    guid: 7baded3f03db51f43b2e86bf1eb95622
+  - enabled: 0
+    path: Assets/Miyaguni/Scenes/Q3.unity
+    guid: 31a59ae93b0aa5d43a25ccfa25f0a9b3
+  - enabled: 0
+    path: Assets/Miyaguni/Scenes/Q3_game.unity
+    guid: ff4974d70793caf49a95ce2fa3979673
+  - enabled: 1
+    path: Assets/Kawasaki/Scenes/Q4.unity
+    guid: 0e928b10798f5ca4b837de9a0d13d088
+  - enabled: 0
+    path: Assets/Kawasaki/Scenes/Q5.unity
+    guid: 0d58aef14c9b9184cb5960b952f83ae1
+  - enabled: 0
+    path: Assets/Kina/Scenes/Q8.unity
+    guid: c2975c032f2ac30499041aa33f6c2da6
+  - enabled: 1
+    path: Assets/Nagamine/Scene/CutEnd.unity
+    guid: 2c86614480ac4f344869be9a8320b002
+  - enabled: 0
+    path: Assets/Miyaguni/Scenes/GameClear.unity
+    guid: 468e63cc9653e5f4eaff285ea9b41fb8
+  - enabled: 0
+    path: Assets/Miyaguni/Scenes/GameOver.unity
+    guid: 411bc273910ea7440a4d0cc5030d2672
+  - enabled: 0
+    path: Assets/Miyaguni/Scenes/Ending.unity
+    guid: 7e4cb5f321695c64da5eb42182244fc3
+  m_configObjects: {}

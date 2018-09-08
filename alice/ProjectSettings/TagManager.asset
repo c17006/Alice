@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - N_Alice
+  - N_CutEnd
+  - N_Alice_golf
+  - N_Twins
+  - N_Cat
+  - N_WhiteRabbit
+  - N_Caterpillar
+  - D_card5
+  - D_card10
+  - D_card1
+  - D_card4
+  - m_cat
+  - N_CutEnd4
+  - N_HintWindow
+  - N_Card1
+  - N_Card4
+  - N_Card5
+  - N_Card10
+  - N_Butterfly
+  - K_Piece
+  - K_PutPos
+  - PassingPoints1
+  - PassingPoints2
+  - PassingPoints3
+  - PassingPoints4
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0

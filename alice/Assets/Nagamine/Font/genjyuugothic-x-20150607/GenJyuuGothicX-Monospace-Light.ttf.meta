@@ -1,0 +1,28 @@
+fileFormatVersion: 2
+guid: b7a6329dcd80ad44f92260af012b0eab
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Gen Jyuu Gothic X Monospace
+  fontNames:
+  - Gen Jyuu Gothic X Monospace
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 8f3951d0705d014409fc30f1ce81d9b0, type: 3}
+  - {fileID: 12800000, guid: 7dd425055cd22534fab1df28e4347d57, type: 3}
+  - {fileID: 12800000, guid: 21acd1a589ce5e4478a399ab403e802a, type: 3}
+  - {fileID: 12800000, guid: 7ad09be676e087d4690c58f9083a02ae, type: 3}
+  - {fileID: 12800000, guid: 6cdc83881d910cd4cb3e711ffe55848c, type: 3}
+  - {fileID: 12800000, guid: 247c0c0ce67526647b25b6b95da2d3b9, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

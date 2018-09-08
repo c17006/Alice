@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/Kawasaki/Scenes/Q4.unity
+  isLoaded: 1
+  isActive: 1

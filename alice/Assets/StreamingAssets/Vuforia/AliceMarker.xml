@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="Card10_ver2" size="10.000000 14.029364" />
+    <ImageTarget name="Card05_ver2" size="10.000000 14.029364" />
+    <ImageTarget name="Card04_ver2" size="10.000000 14.029364" />
+    <ImageTarget name="Card01_ver2" size="10.000000 14.029364" />
+    <ImageTarget name="01_CardGamesSpade" size="10.000000 16.600000" />
+    <ImageTarget name="01_CardGamesClover" size="10.000000 16.600000" />
+    <ImageTarget name="01_CardGamesDiamond" size="10.000000 16.600000" />
+    <ImageTarget name="01_CardGamesHeart" size="10.000000 16.600000" />
+    <ImageTarget name="Hedgehog" size="10.000000 10.000000" />
+    <ImageTarget name="Butterfly" size="10.000000 10.000000" />
+    <ImageTarget name="Caterpillar" size="10.000000 10.000000" />
+    <ImageTarget name="WhiteRabbit" size="10.000000 13.420000" />
+    <ImageTarget name="Twins" size="10.000000 10.000000" />
+    <ImageTarget name="cat6" size="10.000000 10.000000" />
+    <ImageTarget name="AliceA4" size="10.000000 10.000000" />
+  </Tracking>
+</QCARConfig>
