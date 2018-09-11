@@ -2,4 +2,4 @@
 ### 制作期間
 #### 2018/7/3~2018/8/18
 ### 担当箇所
-#### Assets/Daiya/Scripts
+#### Assets//Scripts
