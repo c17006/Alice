@@ -76,16 +76,16 @@
     <None Include="Assets\Editor\Vuforia\ForPrint\ModelTarget\readme_3dprint.txt" />
     <None Include="Assets\Editor\Vuforia\CylinderTargetTextures\VuforiaMars_Images\authoringinfo.xml" />
     <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>D:/Kawasaki/second/Git/Alice/alice/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+      <HintPath>D:/Kawasaki/Portfolio/あしびかんぱにー/UnityData/Alice/alice/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>D:/Kawasaki/second/Git/Alice/alice/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>D:/Kawasaki/Portfolio/あしびかんぱにー/UnityData/Alice/alice/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>D:/Kawasaki/second/Git/Alice/alice/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>D:/Kawasaki/Portfolio/あしびかんぱにー/UnityData/Alice/alice/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>D:/Kawasaki/second/Git/Alice/alice/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>D:/Kawasaki/Portfolio/あしびかんぱにー/UnityData/Alice/alice/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

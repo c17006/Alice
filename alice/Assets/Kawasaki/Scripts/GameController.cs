@@ -7,21 +7,21 @@ using UnityEngine.UI;
 public class GameController : MonoBehaviour {
 
     [SerializeField]
-    private GameObject PlayerPrefab;
+    private GameObject playerPrefab;
 
     // 各種UI
     [SerializeField]
-    private GameObject StartButton;
+    private GameObject startButton;
     [SerializeField]
-    private GameObject RetryButton;
+    private GameObject retryButton;
     [SerializeField]
-    private GameObject ReturnButton;
+    private GameObject returnButton;
     [SerializeField]
-    private GameObject Panel;
+    private GameObject panel;
     [SerializeField]
-    private Text GameTimerText;
+    private Text gametimerText;
     [SerializeField]
-    private Text CountDownText;
+    private Text countdownText;
 
     // サウンド
     private AudioSource audiosource;
@@ -33,34 +33,26 @@ public class GameController : MonoBehaviour {
     AudioClip incurrectSE;
 
     private GameObject PlayerObject;
+    // ゲーム時間
     private float gametime = 60.0f;
-    private bool IsStarted = false;
+    // ゲームが開始しているか
+    private bool isStarted = false;
+    // 取得する切れ端の枚数
     private int cutend = 3;
+    // クリアシーンに遷移する際のディレイ
+    private float clearDelay = 1.0f;
+
+    //カウントダウンの秒数
+    private int countSeconds = 3;
+    private float countdownInterval = 1.0f;
 
     // 通過点のフラグ
     private bool[] isPassingPoints = new bool[4] { true, false, false, false };
     // 通過時に表示するイメージ
     [SerializeField]
     private GameObject[] currectImages;
-
+    // 通過点を通過した数
     private int passingCount = 0;
-
-
-    ////トランプのフラグ
-    //private bool flag1 = true;
-    //private bool flag4 = false;
-    //private bool flag5 = false;
-    //private bool flag10 = false;
-
-    ////通過時に表示するイメージ
-    //[SerializeField]
-    //private GameObject[] currectImages_Point1;
-    //[SerializeField]
-    //private GameObject currectImage_Point2;
-    //[SerializeField]
-    //private GameObject currectImage_Point3;
-    //[SerializeField]
-    //private GameObject currectImage_Point4;
 
 
     void Start() {
@@ -68,30 +60,31 @@ public class GameController : MonoBehaviour {
     }
 
     void Update() {
-        if (!IsStarted) { return; }
-
+        if (!isStarted) { return; }
         CountGameTime();
     }
 
     public void OnClickStart() {
-        Panel.SetActive(false);
-        StartButton.SetActive(false);
+        panel.SetActive(false);
+        startButton.SetActive(false);
         StartCoroutine(CountDown());
     }
 
+    // カウントダウンを行う
     IEnumerator CountDown() {
+        WaitForSeconds cashedWait = new WaitForSeconds(countdownInterval);
         PlaySound(countSE);
-        for (int i = 3; i >= 0; i--) {
+        for (int i = countSeconds; i >= 0; i--) {
             if (i == 0) {
-                CountDownText.text = "GO!";
+                countdownText.text = "GO!";
             } else {
-                CountDownText.text = i.ToString();
+                countdownText.text = i.ToString();
             }
-            yield return new WaitForSeconds(1.0f);
+            yield return cashedWait;
         }
-        Destroy(CountDownText);
-        IsStarted = true;
-        PlayerObject = Instantiate(PlayerPrefab, Vector3.zero, Quaternion.identity);
+        Destroy(countdownText);
+        isStarted = true;
+        PlayerObject = Instantiate(playerPrefab, Vector3.zero, Quaternion.identity);
     }
 
     // 通過チェック
@@ -100,53 +93,24 @@ public class GameController : MonoBehaviour {
             PlaySound(currectSE);
             currectImages[passingCount].SetActive(true);
             isPassingPoints[passingCount] = false;
-            isPassingPoints[passingCount + 1] = true;
             passingCount++;
+            // 最後の通過点を通ったら以下の処理を行う
+            if (passingCount == isPassingPoints.Length) {
+                Clear();
+                return;
+            }
+            isPassingPoints[passingCount] = true;
         } else {
             PlaySound(incurrectSE);
             Reset();
         }
-
-        // 最後のポイントを通過したらクリア
-        if (isPassingPoints[isPassingPoints.Length - 1]) {
-            Clear();
-        }
     }
-
-    ////通過チェック
-    //public void PassingCheck(string tag) {
-    //    if (tag == "D_card1" && flag1) {
-    //        PlaySound(currectSE);
-    //        CurrectImage_h1.SetActive(true);
-    //        flag1 = false;
-    //        flag4 = true;
-    //    } else if (tag == "D_card4" && flag4) {
-    //        PlaySound(currectSE);
-    //        CurrectImage_d4.SetActive(true);
-    //        flag4 = false;
-    //        flag5 = true;
-    //    } else if (tag == "D_card5" && flag5) {
-    //        PlaySound(currectSE);
-    //        CurrectImage_c5.SetActive(true);
-    //        flag5 = false;
-    //        flag10 = true;
-    //    } else if (tag == "D_card10" && flag10) {
-    //        PlaySound(currectSE);
-    //        CurrectImage_s10.SetActive(true);
-    //        //flag10 = false;
-    //        Clear();
-    //    } else {
-    //        PlaySound(incurrectSE);
-    //        Reset();
-    //    }
-    //}
 
     // ゲームの残り時間の計算
     private void CountGameTime() {
         if (gametime > 0) {
             gametime -= Time.deltaTime;
-            GameTimerText.text = gametime.ToString("F0");
-
+            gametimerText.text = gametime.ToString("F0");
         }
 
         // ゲームタイムが0以下のときゲームオーバー
@@ -179,110 +143,19 @@ public class GameController : MonoBehaviour {
     }
 
     private void GameOver() {
-        GameTimerText.text = null;
-        RetryButton.SetActive(true);
-        ReturnButton.SetActive(true);
+        gametimerText.text = null;
+        retryButton.SetActive(true);
+        returnButton.SetActive(true);
     }
 
     private void Clear() {
         GameMainCtrl.ceGet += cutend;
         GameMainCtrl.f_Q4 = true;
-        GameTimerText.text = null;
-        Invoke("GoCutEnd", 1.0f);
-
+        gametimerText.text = null;
+        Invoke("GoCutEnd", clearDelay);
     }
 
     private void GoCutEnd() {
         SceneManager.LoadScene("CutEnd");
     }
-
-
-    //void Update() {
-    //    if (!startflag) { return; }
-
-    //    if (countdowntime > 0) {
-    //        countdowntime -= Time.deltaTime;
-    //        CountDownText.GetComponent<Text>().text = countdowntime.ToString("F0");
-    //        if (countdowntime <= 0) {
-    //            Destroy(CountDownText);
-    //            movestart = true;
-    //        }
-    //        return;
-
-    //    } else {
-
-    //        if (clear) { return; }
-
-    //        if (time <= 0) {
-    //            GameOver();
-    //            return;
-    //        }
-
-
-    //        time -= Time.deltaTime;
-    //        timeText.text = "残り" + time.ToString("F0") + "秒";
-
-
-    //    }
-
-
-    //}
-
-    //public void Reset(GameObject destroy) {
-
-    //    //GameObject Player = GameObject.FindWithTag("Player");
-    //    Destroy(destroy);
-    //    Instantiate(PlayerPrefab, Vector3.zero, Quaternion.identity);
-
-    //    CurrectImage_h1.SetActive(false);
-    //    Currectimage_d4.SetActive(false);
-    //    Currectimage_c5.SetActive(false);
-    //    Currectimage_s10.SetActive(false);
-
-    //    flag1 = true;
-    //    flag4 = false;
-    //    flag5 = false;
-    //    flag10 = false;
-    //}
-
-    //public void Clear() {
-    //    //SceneManager.LoadScene("Clear");
-    //    timeText.text = null;
-    //    clear = true;
-    //    GameMainCtrl.ceGet += cutend;
-    //    GameMainCtrl.f_Q4 = true;
-    //    //GameObject.Find("RetryButton").SetActive(true);
-    //    Invoke("GoCutEnd", 1.0f);
-    //    //SceneManager.LoadScene("CutEnd");
-
-
-    //}
-
-    //void GameOver() {
-    //    //SceneManager.LoadScene("GameOver");
-    //    timeText.text = null;
-    //    gameover = true;
-    //    Retrybutton.SetActive(true);
-    //    ReturnButton.SetActive(true);
-
-    //}
-
-    //public void StartButton() {
-    //    StartButton.SetActive(false);
-    //    Panel.SetActive(false);
-    //    startflag = true;
-    //    audiosource.PlayOneShot(countSE);
-
-    //}
-
-    //public void CurrectSE() {
-    //    audiosource.PlayOneShot(currectSE);
-    //}
-
-    //public void inCurrectSE() {
-    //    audiosource.PlayOneShot(incurrectSE);
-    //}
-    //void GoCutEnd() {
-    //    SceneManager.LoadScene("CutEnd");
-    //}
 }

@@ -1,8 +1,9 @@
 Android
 PlayerPath?
-D:/Kawasaki/second/unitybuild/Alice/Q4_test.apk
+D:/Kawasaki/second/unitybuild/Alice/Q4_180913.apk
 SceneListBegin?
 Assets/Kawasaki/Scenes/Q4.unity
+Assets/Nagamine/Scene/CutEnd.unity
 SceneListEnd?
 7b8e7866f51a0817662577a68d076786 Unity.TextMeshPro.dll:TMPro.TMP_SelectionCaret
 a8d930527bf604f820c1c45cacf437c6 Unity.TextMeshPro.dll:TMPro.TMP_Dropdown
@@ -104,7 +105,6 @@ ff05dcdf90651c3d98a9cad3df5e471e UnityEngine.Timeline.dll:UnityEngine.Timeline.C
 30afa8783a8bbee2e465ec9ce1efaee2 UnityEngine.Timeline.dll:UnityEngine.Timeline.GroupTrack
 30afa8783a8bbee2e465ec9ce1efaee2 UnityEngine.Timeline.dll:UnityEngine.Timeline.PlayableTrack
 607d64d2c4bc76ac9876e6f7b9cc7edf UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.InputManager
 5833a86cc374f497ae8d9fb9d8c3e5f4 Unity.TextMeshPro.dll:TMPro.TMP_SubMeshUI
 fc1e0f4d8439d9928083474691511a13 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Networking.dll:UnityEngine.Networking.NetworkBehaviour
@@ -202,7 +202,6 @@ a924c90a95cf65003f662aa5e30abb6b Vuforia.UnityExtensions.dll:Vuforia.VuforiaConf
 05524b8f659e7bfe5756d1335fec24ba Vuforia.UnityExtensions.dll:Vuforia.WireframeTrackableEventHandler
 65c129538c3b1f07082e1ae53f0f0d47 Unity.TextMeshPro.dll:TMPro.TMP_Asset
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.player
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.StartButtonControl
 05524b8f659e7bfe5756d1335fec24ba Unity.TextMeshPro.dll:TMPro.TMP_SpriteAnimator
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ARtouch
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.cat
@@ -225,7 +224,7 @@ e9bdabf9265d758d56f01bb188916fa8 UnityEngine.Networking.dll:UnityEngine.Networki
 73843688b51256aed059f049c540bca8 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformChild
 528ea1fd7c01796fc60c4e2f172ea229 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
 3485e1f8f870362e815a9f780d309339 Unity.TextMeshPro.dll:TMPro.PackageResourceImporterWindow
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.RetryButtonControl
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.RetryButtonController
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.DefaultTrackableEventHandler
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.TitleCtrl
 b18590e70610904b42dc8fa7397f268e Assembly-CSharp.dll:.GameMainCtrl
@@ -252,7 +251,7 @@ bcada89394089914d10ff70647b120da Unity.TextMeshPro.dll:TMPro.TextMeshProUGUI
 b5072e81bd3d2f52e06336be3d2c3993 Assembly-CSharp.dll:.CatGenerator
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.SceneUI
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
-98d033df50d06b1771cf032dc6feca99 Assembly-CSharp.dll:.GameController
+37bfb6fee7a78bb952744a1203c3ac6f Assembly-CSharp.dll:.GameController
 2342980e2d9c9608317ff0c276b95d6d Assembly-CSharp.dll:.ARcameraCtrl
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ExitQuestion
 e763036081c708b34f78f5a56f72c23d Unity.TextMeshPro.dll:TMPro.TMP_StyleSheet

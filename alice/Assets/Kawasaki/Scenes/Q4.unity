@@ -1187,14 +1187,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a43c06cc86cc794faee2cef4f5d417e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerPrefab: {fileID: 1176873358453656, guid: 562062ce8e9e7284dba3304ec0bd1ae3,
+  playerPrefab: {fileID: 1176873358453656, guid: 562062ce8e9e7284dba3304ec0bd1ae3,
     type: 2}
-  StartButton: {fileID: 1542433223}
-  RetryButton: {fileID: 869490845}
-  ReturnButton: {fileID: 1539465824}
-  Panel: {fileID: 436349364}
-  GameTimerText: {fileID: 1995333816}
-  CountDownText: {fileID: 1875825894}
+  startButton: {fileID: 1542433223}
+  retryButton: {fileID: 869490845}
+  returnButton: {fileID: 1539465824}
+  panel: {fileID: 436349364}
+  gametimerText: {fileID: 1995333816}
+  countdownText: {fileID: 1875825894}
   countSE: {fileID: 8300000, guid: c5c10a998c192234888efdb45432f271, type: 3}
   currectSE: {fileID: 8300000, guid: a5e4f6ae03fa2904fa1f6a6c421bcc84, type: 3}
   incurrectSE: {fileID: 8300000, guid: 5633fadd3e5a8304e9744650929c74e5, type: 3}
