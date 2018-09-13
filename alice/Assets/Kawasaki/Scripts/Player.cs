@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
 
 
 public class Player : MonoBehaviour {
@@ -17,15 +16,8 @@ public class Player : MonoBehaviour {
     }
 
     void FixedUpdate() {
-        //if (!gamecontroller.movestart) { return; }
-        //if (gamecontroller.clear || gamecontroller.gameover) {
-        //    rb.velocity = Vector3.zero;
-        //    return;
-        //}
-
         Move();
     }
-
 
     private void Move() {
         Vector3 dir = Vector3.zero;
@@ -39,7 +31,6 @@ public class Player : MonoBehaviour {
     private void OnTriggerEnter(Collider other) {
         if (other.gameObject.tag.IndexOf("PassingPoints") == 0) {
             gamecontroller.PassingCheck(other.gameObject.tag);
-
         }
     }
 }

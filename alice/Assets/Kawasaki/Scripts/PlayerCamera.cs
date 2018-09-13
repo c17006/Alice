@@ -19,13 +19,20 @@ public class PlayerCamera : MonoBehaviour {
 
 
     void FixedUpdate() {
-        playerObject = GameObject.FindWithTag("Player");
+        // プレイヤーがいないなら以下の処理を行う
+        if (playerObject == null) {
+            playerObject = GameObject.FindWithTag("Player");
+            return;
+        }
+        MoveCamera();
+    }
 
-        // プレイヤーがいないなら以下の処理を行わない
-        if (playerObject == null) { return; }
-
+    private void MoveCamera() {
         cameraPos = playerObject.transform.position;
         gameObject.transform.position = new Vector3(Mathf.Clamp(cameraPos.x, minX, maxX), y,
                                                     Mathf.Clamp(cameraPos.z, minZ, maxZ));
     }
+
+
 }
+
